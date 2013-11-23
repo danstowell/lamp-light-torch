@@ -2,59 +2,24 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8;charset=utf-8" />
-<head>
-<style type="text/css">
-body {
-	color: white;
-	background: white;
-	text-align: center;
-	vertical-align: middle;
-}
-p {
-	padding: 1em;
-	margin: 1em;
-}
-</style>
-<script type="text/javascript">
-var colmode = 0;
-var manifestLocation = "http://danstowell.github.io/lamp-light-torch/manifest.webapp";
-function flip(){
-	colmode = 1 - colmode;
-	if(colmode==0){
-		thecolor = 'white';
-	}else{
-		thecolor = 'red';
-	}
-	document.body.style.background = thecolor;
-	document.body.style.color = thecolor;
-}
-
-document.onclick = flip;
-
-function install(){
-	var installRequest = navigator.mozApps.install(manifestLocation);
-	installRequest.onsuccess = function(data) {
-		document.getElementById("installtext").style.color = 'inherit';
-	};
-	installRequest.onerror = function(err) {
-		console.log("Install error! " + manifestLocation);
-	};
-}
-
-var request = navigator.mozApps.checkInstalled(manifestLocation);
-request.onsuccess = function() {
-	if (!request.result) {
-		document.getElementById("installtext").style.color = 'gray';
-	}
-};
-
-</script>
+	<style type="text/css">
+		body {
+			color: white;
+			background: white;
+			text-align: center;
+			vertical-align: middle;
+		}
+		p {
+			padding: 1em;
+			margin: 1em;
+		}
+	</style>
+	<script type="text/javascript" src="lamp-light-torch.js" />
 </head>
+
 <body>
-<p>Lamp Light Torch</p>
-
-<p id="installtext" onclick="install()">Click to install this app</p>
-
+	<p>Lamp Light Torch</p>
+	<p id="installtext">Click to install this app</p>
 </body>
 
 </html>
