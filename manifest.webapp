@@ -3,7 +3,7 @@
   "description": "Free simple light for FirefoxOS",
   "launch_path": "/lamp-light-torch",
   "icons": {
-    "128": "/lamp-light-torch/lamp-light-torch-128.png"
+    "128": "/lamp-light-torch/lamp-light-torch-128.png",
     "60": "/lamp-light-torch/lamp-light-torch-60.png"
   },
   "developer": {
