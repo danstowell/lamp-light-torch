@@ -10,9 +10,14 @@ body {
 	text-align: center;
 	vertical-align: middle;
 }
+p {
+	padding: 1em;
+	margin: 1em;
+}
 </style>
 <script type="text/javascript">
 var colmode = 0;
+var manifestLocation = "http://danstowell.github.io/lamp-light-torch/manifest.webapp";
 function flip(){
 	colmode = 1 - colmode;
 	if(colmode==0){
@@ -25,12 +30,31 @@ function flip(){
 }
 
 document.onclick = flip;
+
+function install(){
+	var installRequest = navigator.mozApps.install(manifestLocation);
+	installRequest.onsuccess = function(data) {
+		document.getElementById("installtext").style.color = 'white';
+	};
+	installRequest.onerror = function(err) {
+		console.log("Install error! " + manifestLocation);
+	};
+}
+
+var request = navigator.mozApps.checkInstalled(manifestLocation);
+request.onsuccess = function() {
+	if (!request.result) {
+		document.getElementById("installtext").style.color = 'gray';
+	}
+};
+
 </script>
 </head>
 <body>
-Lamp
-Light
-Torch
+<p>Lamp Light Torch<p>
+
+<p id="installtext" onclick="install()">Click to install this app</div>
+
 </body>
 
 </html>
