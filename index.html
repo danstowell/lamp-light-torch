@@ -34,7 +34,7 @@ document.onclick = flip;
 function install(){
 	var installRequest = navigator.mozApps.install(manifestLocation);
 	installRequest.onsuccess = function(data) {
-		document.getElementById("installtext").style.color = 'white';
+		document.getElementById("installtext").style.color = 'inherit';
 	};
 	installRequest.onerror = function(err) {
 		console.log("Install error! " + manifestLocation);
