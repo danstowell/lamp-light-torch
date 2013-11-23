@@ -3,9 +3,12 @@
   "description": "Free simple light for FirefoxOS",
   "launch_path": "/lamp-light-torch/index.html",
   "icons": {
+    "256": "/lamp-light-torch/lamp-light-torch-256.png",
     "128": "/lamp-light-torch/lamp-light-torch-128.png",
+    "120": "/lamp-light-torch/lamp-light-torch-120.png",
     "90": "/lamp-light-torch/lamp-light-torch-90.png",
-    "60": "/lamp-light-torch/lamp-light-torch-60.png"
+    "60": "/lamp-light-torch/lamp-light-torch-60.png",
+    "32": "/lamp-light-torch/lamp-light-torch-32.png"
   },
   "developer": {
     "name": "Dan Stowell",
