@@ -1,7 +1,7 @@
 {
   "name": "Lamp Light Torch",
   "description": "Free simple light for FirefoxOS",
-  "launch_path": "/lamp-light-torch",
+  "launch_path": "/lamp-light-torch/index.html",
   "icons": {
     "128": "/lamp-light-torch/lamp-light-torch-128.png",
     "60": "/lamp-light-torch/lamp-light-torch-60.png"
