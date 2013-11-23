@@ -1,5 +1,3 @@
-alert("hi");
-
 var colmode = 0;
 var manifestLocation = "http://danstowell.github.io/lamp-light-torch/manifest.webapp";
 
@@ -26,15 +24,13 @@ function install(){
 
 
 /////////////////////////////////////////////
-alert("onloadoo");
-document.onload = function() {
-	alert("onloaded");
+window.onload = function(e) {
 	document.onclick = flip;
 	var request = navigator.mozApps.checkInstalled(manifestLocation);
 	request.onsuccess = function() {
 		if (!request.result) {
-			document.getElementById("installtext").onclick = install;
-			document.getElementById("installtext").style.color = 'gray';
+			window.document.getElementById("installtext").onclick = install;
+			window.document.getElementById("installtext").style.color = 'gray';
 		}
 	};
 };
