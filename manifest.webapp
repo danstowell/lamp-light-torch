@@ -15,6 +15,7 @@
     "url": "http://www.mcld.co.uk/"
   },
   "default_locale": "en",
+  "appacache_path": "/manifest.appcache",
   "version": "0.1",
   "installs_allowed_from": ["*"]
 }
